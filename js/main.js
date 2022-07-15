@@ -27,6 +27,7 @@ const activeSlide = (index) => {
   // sliderItems[index].classList.add("active");
 };
 
+// Переключение слайда (вперёд)
 const nextSlide = () => {
   index++;
   index = index > sliderItems.length - 1 ? 0 : index;
@@ -41,6 +42,7 @@ const nextSlide = () => {
   // activeSlide(index);
   // activeTab(index);
 };
+// Переключение слайда (назад)
 const prevSlide = () => {
   // index--;
   // index = index < 0 ? sliderItems.length - 1 : index;
@@ -103,6 +105,7 @@ const activeTab = (index) => {
 //   // tabs[index].classList.add("active");
 // };
 
+// Вешаем обаботчик события клик на наши табы. Делаем и таб и слайдактивным
 // Через forEach
 // tabs.forEach((tab, tabIndex) => {
 //   tab.addEventListener("click", () => {

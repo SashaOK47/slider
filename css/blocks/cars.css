@@ -1,0 +1,170 @@
+.cars {
+  margin: 5rem;
+}
+.cars__tabs {
+  margin-bottom: 5rem;
+}
+.tabs {
+  display: flex;
+  justify-content: center;
+}
+/* Если табы реализованы с помощью <input type="radio"> */
+.tabs__input {
+  -webkit-appearance: none;
+  appearance: none;
+  position: absolute;
+}
+.tabs__label {
+  position: relative;
+  font-family: inherit;
+  width: 12.5rem;
+  padding-top: 0.8125rem;
+  padding-bottom: 0.8125rem;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  background-color: transparent;
+  border: 0.0625rem solid var(--color-border);
+  cursor: pointer;
+}
+.tabs__label:not(:last-child) {
+  margin-right: 1.25rem;
+}
+.tabs__box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 0.0625rem solid transparent;
+  transition: border-color 0.5s;
+}
+.tabs__input:checked + .tabs__box {
+  border-color: var(--color-accent);
+}
+
+/* Если табы реализованы с помощью <button></button> */
+/* .tabs__btn {
+  font-family: inherit;
+  width: 12.5rem;
+  padding-top: 0.8125rem;
+  padding-bottom: 0.8125rem;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  background-color: transparent;
+  border: 0.0625rem solid var(--color-border);
+  cursor: pointer;
+}
+.tabs__btn:not(:last-child) {
+  margin-right: 1.25rem;
+}
+.tabs__btn.active {
+  border-color: var(--color-accent);
+} */
+
+.slider {
+  position: relative;
+  overflow: hidden;
+}
+.slider__wrapper {
+  position: relative;
+  left: 0;
+  display: flex;
+  transition: all 1s;
+  overflow: hidden;
+}
+.slider__item {
+  min-height: 370px;
+  width: 100%;
+  padding-left: 3.75rem;
+  padding-right: 3.75rem;
+  display: none;
+  justify-content: space-around;
+  align-items: center;
+}
+.slider__item.active {
+  display: flex;
+}
+.slider__info {
+  flex-basis: 20%;
+}
+
+.car-info__title {
+  margin-bottom: 2.3125rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+}
+.car-info__list {
+  margin-bottom: 2.1875rem;
+}
+.car-info__item {
+  padding-left: 1.25rem;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  position: relative;
+}
+.car-info__item:not(:last-child) {
+  margin-bottom: 1.75rem;
+}
+.car-info__item::after {
+  content: '';
+  display: block;
+  width: 0.875rem;
+  height: 0.875rem;
+  background: url('../../img/check.svg');
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.slider__image {
+  flex-basis: 60%;
+}
+.slider__image img {
+  max-width: 100%;
+  object-fit: cover;
+}
+.slider__text {
+  display: none;
+}
+.slider__btn {
+  display: none;
+}
+.cars__slider-arrow {
+  display: block;
+  position: absolute;
+  bottom: 50%;
+  background: none;
+}
+.cars__slider-arrow--prev {
+  left: 3%;
+}
+.cars__slider-arrow--next {
+  right: 3%;
+  transform: rotate(180deg);
+}
+.car-info__button {
+  padding: 0.8125rem 4.875rem;
+  font-weight: 500;
+  font-family: inherit;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  background-color: var(--color-accent);
+  cursor: pointer;
+  transition: background 0.5s ease, box-shadow 0.5s ease, color 0.5s ease;
+}
+.car-info__button:hover,
+.car-info__button:focus {
+  color: var(--color-white);
+  background: var(--color-accent);
+  box-shadow: 0 0.25rem 1.5rem var(--color-accent);
+}
+.cars__slider-dots {
+  display: none;
+}
